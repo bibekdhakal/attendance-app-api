@@ -8,6 +8,7 @@ use JWTAuth;
 use Illuminate\Support\Facades\Validator;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use App\Traits\ResponseTrait;
+use Exception;
 
 class UserController extends Controller
 {
@@ -64,6 +65,16 @@ class UserController extends Controller
             return $this->errorResponse([
                 'message' => 'Sorry, user cannot be logged out'
             ], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    public function get_user(Request $request)
+    {
+        try {
+            $user = JWTAuth::authenticate($request->token);
+            return $this->successResponse($user, [], 200);
+        } catch (Exception $exception) {
+            return $this->errorResponse(['message' => $exception->getMessage()], $exception->getCode());
         }
     }
 }
