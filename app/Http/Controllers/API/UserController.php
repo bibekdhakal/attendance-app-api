@@ -20,6 +20,7 @@ class UserController extends Controller
             'password' => $request->get('password'),
             'user_type' => 'student'
         ];
+
         $validator = Validator::make($credentials, [
             'email' => 'required|email',
             'password' => 'required|string|min:6|max:50'
