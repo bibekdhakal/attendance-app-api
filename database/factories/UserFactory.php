@@ -27,11 +27,10 @@ class UserFactory extends Factory
         $studentTypes = ['Online', 'In-campus', 'External'];
         $randomStudentType = $studentTypes[array_rand($studentTypes)];
 
-        $campusIds = Campus::pluck('campus_id')->toArray();
-        $randomCampusId = $campusIds[array_rand($campusIds)];
+        // $campusIds = Campus::pluck('campus_id');
+        $randomCampusId = Campus::inRandomOrder()->value('campus_id');
 
         return [
-            'user_id' => (string) \Str::uuid(),
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),

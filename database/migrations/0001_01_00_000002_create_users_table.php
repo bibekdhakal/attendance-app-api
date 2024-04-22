@@ -12,14 +12,17 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->uuid('user_id')->primary();
+            // $table->uuid('user_id')->primary();
+            $table->increments('user_id');
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->enum('user_type', ['student', 'instrutor', 'admin'])->default('student');
             $table->enum('student_type', ['Online', 'In-campus', 'External'])->nullable();
-            $table->foreignUuid('campus_id')->references('campus_id')->on('campuses')->onDelete('cascade');
+            // $table->foreignUuid('campus_id')->references('campus_id')->on('campuses')->onDelete('cascade');
+            $table->unsignedInteger('campus_id');
+            $table->foreign('campus_id')->references('campus_id')->on('campuses')->onDelete('cascade');
             $table->rememberToken();
             $table->index('user_id');
             $table->timestamps();
@@ -34,7 +37,8 @@ return new class extends Migration
         Schema::create('sessions', function (Blueprint $table) {
             $table->string('id')->primary();
             // $table->foreignId('user_id')->nullable()->index();
-            $table->foreignUuid('user_id')->references('user_id')->on('users')->onDelete('cascade');
+            $table->unsignedInteger('campus_id');
+            $table->foreign('campus_id')->references('campus_id')->on('campuses')->onDelete('cascade');
             $table->string('ip_address', 45)->nullable();
             $table->text('user_agent')->nullable();
             $table->longText('payload');

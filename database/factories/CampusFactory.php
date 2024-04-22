@@ -17,12 +17,12 @@ class CampusFactory extends Factory
      */
     public function definition(): array
     {
-        $universityIds = University::pluck('university_id')->toArray();
-        $randomUniversityId = $universityIds[array_rand($universityIds)];
+        // $universityIds = University::pluck('university_id')->toArray();
+        // $randomUniversityId = $universityIds[array_rand($universityIds)];
         return [
-            'campus_id' => (string) \Str::uuid(),
+            // 'campus_id' => (string) \Str::uuid(),
             'campus_name' => $this->faker->address,
-            'university_id' => $randomUniversityId,
+            // 'university_id' => $randomUniversityId,
             'latitude' => $this->faker->latitude,
             'longitude' => $this->faker->longitude
         ];
