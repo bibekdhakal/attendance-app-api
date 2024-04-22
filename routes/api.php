@@ -10,4 +10,5 @@ Route::group(['middleware' => ['jwt.verify']], function () {
     Route::get('logout', [UserController::class, 'logout']);
     Route::get('user-detail', [UserController::class, 'get_user']);
     Route::get('geolocation', [ApiController::class, 'campus_physical_location']);
+    Route::get('units', [ApiController::class, 'units']);
 });
