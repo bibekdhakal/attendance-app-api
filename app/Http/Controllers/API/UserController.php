@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Validator;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use App\Traits\ResponseTrait;
 use Exception;
+use Illuminate\Http\Response;
 
 class UserController extends Controller
 {
