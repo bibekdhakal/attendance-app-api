@@ -15,10 +15,14 @@ class AttendanceController extends Controller
     public function create(Request $request)
     {
         try {
+            $jsonData = $request->json()->all();
+
             $user_id = auth()->user()->user_id;
-            $unit_id = $request->get('unit_id');
-            $status = $request->get('status');
-            $attendance = Attendance_record::create(['user_id' => $user_id, 'unit_id' => $unit_id, 'status' => $status]);
+            $unit_id = $request->input('unit_id');
+            $status = $request->input('status');
+            $attendance = [$unit_id, $status];
+            $jsonData['user_id'] = $user_id;
+            $attendance = Attendance_record::create($jsonData);
 
             return $this->successResponse(
                 $attendance,
