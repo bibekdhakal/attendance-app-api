@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 use JWTAuth;
 use Illuminate\Support\Facades\Validator;
@@ -73,6 +74,29 @@ class UserController extends Controller
     {
         try {
             $user = JWTAuth::authenticate($request->token);
+            return $this->successResponse($user, [], 200);
+        } catch (Exception $exception) {
+            return $this->errorResponse(['message' => $exception->getMessage()], $exception->getCode());
+        }
+    }
+
+    public function store(Request $request)
+    {
+        try {
+            $validatedData = $request->validate([
+                'name' => 'required|string',
+                'email' => 'required|email|unique:users',
+                'password' => 'required|string|min:6',
+                'status' => 'required|string',
+                'campus_id' => 'required|exists:campuses,id',
+                'student_type' => 'required|string',
+            ]);
+
+            $jsonData = $request->json()->all();
+
+            $user = new User();
+            $user->data = $jsonData;
+            $user->save();
             return $this->successResponse($user, [], 200);
         } catch (Exception $exception) {
             return $this->errorResponse(['message' => $exception->getMessage()], $exception->getCode());
