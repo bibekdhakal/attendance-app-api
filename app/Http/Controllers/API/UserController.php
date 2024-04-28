@@ -3,14 +3,14 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use App\Models\User;
 use Illuminate\Http\Request;
-use JWTAuth;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Validator;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use App\Traits\ResponseTrait;
+use App\Models\User;
 use Exception;
-use Illuminate\Http\Response;
+use JWTAuth;
 
 class UserController extends Controller
 {
@@ -83,21 +83,25 @@ class UserController extends Controller
     public function store(Request $request)
     {
         try {
-            $validatedData = $request->validate([
-                'name' => 'required|string',
-                'email' => 'required|email|unique:users',
-                'password' => 'required|string|min:6',
-                'status' => 'required|string',
-                'campus_id' => 'required|exists:campuses,id',
-                'student_type' => 'required|string',
-            ]);
+            // $validatedData = $request->validate([
+            //     'name' => 'required|string',
+            //     'email' => 'required|email|unique:users',
+            //     'password' => 'required|string|min:6',
+            //     'status' => 'required|string',
+            //     'campus_id' => 'required|exists:campuses,id',
+            //     'student_type' => 'required|string',
+            // ]);
 
-            $jsonData = $request->json()->all();
+            $jsonData = [
+                "name" => $request->json()->get('name'),
+                "email" => $request->json()->get('email'),
+                "password" => bcrypt($request->json()->get('password')),
+                "student_type" => $request->json()->get('student_type'),
+                "campus_id" => $request->json()->get('campus_id')
+            ];
 
-            $user = new User();
-            $user->data = $jsonData;
-            $user->save();
-            return $this->successResponse($user, [], 200);
+            $user = User::create($jsonData);
+            return $this->successResponse($user, ["Signed Up successfully"], 200);
         } catch (Exception $exception) {
             return $this->errorResponse(['message' => $exception->getMessage()], $exception->getCode());
         }

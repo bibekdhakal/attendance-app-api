@@ -9,6 +9,7 @@ use Illuminate\Http\Response;
 use Tymon\JWTAuth\Exceptions\JWTException;
 
 
+
 class AttendanceController extends Controller
 {
     use ResponseTrait;
@@ -18,9 +19,6 @@ class AttendanceController extends Controller
             $jsonData = $request->json()->all();
 
             $user_id = auth()->user()->user_id;
-            $unit_id = $request->input('unit_id');
-            $status = $request->input('status');
-            $attendance = [$unit_id, $status];
             $jsonData['user_id'] = $user_id;
             $attendance = Attendance_record::create($jsonData);
 
