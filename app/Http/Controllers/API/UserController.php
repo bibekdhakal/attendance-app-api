@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Models\Campus;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Validator;
@@ -49,8 +50,12 @@ class UserController extends Controller
             ], 500);
         }
 
+        $campus_id =  auth()->user()->campus_id;
+        $geolocation = Campus::where('campus_id', $campus_id)->select('latitude', 'longitude')->first();
+
         return $this->successResponse([
-            'token' => $token
+            'token' => $token,
+            'geolocation' => $geolocation
         ]);
     }
 
