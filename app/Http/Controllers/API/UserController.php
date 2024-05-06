@@ -55,7 +55,7 @@ class UserController extends Controller
 
         return $this->successResponse([
             'token' => $token,
-            'geolocation' => $geolocation
+            'campusLocation' => $geolocation
         ]);
     }
 
