@@ -57,10 +57,10 @@ class ApiController extends Controller
         }
     }
 
-    public function check_unit_attendance(Request $request)
+    public function check_unit_attendance($unit_id)
     {
         try {
-            $attendance = Attendance_record::where('unit_id', $request->unit_id)->whereDate('created_at', date('Y-m-d'))->where('user_id', auth()->user()->user_id)->first();
+            $attendance = Attendance_record::where('unit_id', $unit_id)->whereDate('created_at', date('Y-m-d'))->where('user_id', auth()->user()->user_id)->first();
             if ($attendance) {
                 return $this->successResponse([], ['Attendance already done'], 200);
             }

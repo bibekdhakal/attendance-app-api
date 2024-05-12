@@ -17,5 +17,5 @@ Route::group(['middleware' => ['jwt.verify']], function () {
     Route::get('geolocation', [ApiController::class, 'campus_physical_location']);
     Route::get('units', [ApiController::class, 'units']);
     Route::post('attendance/create', [AttendanceController::class, 'create']);
-    Route::get('check-attendance', [ApiController::class, 'check_unit_attendance']);
+    Route::get('check-attendance/{unit_id}', [ApiController::class, 'check_unit_attendance']);
 });
