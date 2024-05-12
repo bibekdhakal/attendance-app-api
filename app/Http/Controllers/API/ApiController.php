@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Models\Attendance_record;
 use App\Models\Campus;
 use App\Models\Unit;
 use App\Models\User;
@@ -48,6 +49,21 @@ class ApiController extends Controller
             $campuses = Campus::select('campus_id', 'campus_name')->orderBy('campus_name', 'ASC')->get();
 
             return $this->successResponse($campuses, [], 200);
+        } catch (Exception $e) {
+            return $this->errorResponse([
+                'message' => 'Internal Error',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    public function check_unit_attendance(Request $request)
+    {
+        try {
+            $attendance = Attendance_record::where('unit_id', $request->unit_id)->whereDate('created_at', date('Y-m-d'))->where('user_id', auth()->user()->user_id)->first();
+            if ($attendance) {
+                return $this->successResponse([], ['Attendance already done'], 200);
+            }
         } catch (Exception $e) {
             return $this->errorResponse([
                 'message' => 'Internal Error',
