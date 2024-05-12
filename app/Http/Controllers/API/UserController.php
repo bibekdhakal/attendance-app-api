@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Mail\SendCodeResetPassword;
 use App\Models\Campus;
+use App\Models\ResetPassword;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Validator;
@@ -11,7 +13,9 @@ use Tymon\JWTAuth\Exceptions\JWTException;
 use App\Traits\ResponseTrait;
 use App\Models\User;
 use Exception;
+use Illuminate\Support\Facades\Mail;
 use JWTAuth;
+use Illuminate\Validation\ValidationException;
 
 class UserController extends Controller
 {
@@ -88,14 +92,14 @@ class UserController extends Controller
     public function store(Request $request)
     {
         try {
-            // $validatedData = $request->validate([
-            //     'name' => 'required|string',
-            //     'email' => 'required|email|unique:users',
-            //     'password' => 'required|string|min:6',
-            //     'status' => 'required|string',
-            //     'campus_id' => 'required|exists:campuses,id',
-            //     'student_type' => 'required|string',
-            // ]);
+            $request->validate([
+                'name' => 'required|string',
+                'email' => 'required|email|unique:users',
+                'password' => 'required|string|min:6',
+                'status' => 'required|string',
+                'campus_id' => 'required|exists:campuses,id',
+                'student_type' => 'required|string',
+            ]);
 
             $jsonData = [
                 "name" => $request->json()->get('name'),
@@ -107,6 +111,63 @@ class UserController extends Controller
 
             $user = User::create($jsonData);
             return $this->successResponse($user, ["Signed Up successfully"], 200);
+        } catch (ValidationException $exception) {
+            return $this->errorResponse(['message' => $exception->validator->errors()->first()], 422);
+        } catch (Exception $exception) {
+            return $this->errorResponse(['message' => $exception->getMessage()], $exception->getCode());
+        }
+    }
+
+    public function reset_password(Request $request)
+    {
+        try {
+            $data = $request->validate([
+                'email' => 'required|email',
+            ]);
+
+            $user = User::where('email', $data['email'])->first();
+
+            if (!$user) {
+                return $this->errorResponse(['message' => 'User not found'], 404);
+            }
+
+            ResetPassword::where('email', $request->email)->delete();
+
+            $data['token'] = mt_rand(100000, 999999);
+            $data = ResetPassword::create($data);
+            Mail::to($request->email)->send(new SendCodeResetPassword($data->token));
+            return $this->successResponse($data, ["Code is sent to your email. Please check your email and verify the code"], 200);
+        } catch (ValidationException $exception) {
+            return $this->errorResponse(['message' => $exception->validator->errors()->first()], 422);
+        } catch (Exception $exception) {
+            return $this->errorResponse(['message' => $exception->getMessage()], $exception->getCode());
+        }
+    }
+
+    public function verify_code(Request $request)
+    {
+        try {
+            $data = $request->validate([
+                'email' => 'required|email',
+                'token' => 'required|numeric',
+            ]);
+
+            $reset_password = ResetPassword::where('email', $data['email'])
+                ->where('token', $data['token'])
+                ->first();
+
+            if (!$reset_password) {
+                return $this->errorResponse(['message' => 'Invalid code'], 400);
+            }
+
+            $user = User::where('email', $data['email'])->first();
+
+            $user->password = bcrypt($request->password);
+            $user->save();
+
+            $reset_password->delete();
+
+            return $this->successResponse([], ["Password reset successfully"], 200);
         } catch (Exception $exception) {
             return $this->errorResponse(['message' => $exception->getMessage()], $exception->getCode());
         }
