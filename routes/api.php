@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('login', [UserController::class, 'authenticate']);
 Route::post('user/create', [UserController::class, 'store']);
+Route::get('campuses', [ApiController::class, 'get_campuses']);
 
 Route::group(['middleware' => ['jwt.verify']], function () {
     Route::get('logout', [UserController::class, 'logout']);

@@ -41,4 +41,18 @@ class ApiController extends Controller
             ], 500);
         }
     }
+
+    public function get_campuses(Request $request)
+    {
+        try {
+            $campuses = Campus::select('campus_id', 'campus_name')->orderBy('campus_name', 'ASC')->get();
+
+            return $this->successResponse($campuses, [], 200);
+        } catch (Exception $e) {
+            return $this->errorResponse([
+                'message' => 'Internal Error',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
 }
