@@ -63,6 +63,8 @@ class ApiController extends Controller
             $attendance = Attendance_record::where('unit_id', $unit_id)->whereDate('created_at', date('Y-m-d'))->where('user_id', auth()->user()->user_id)->first();
             if ($attendance) {
                 return $this->successResponse([], ['Attendance already done'], 200);
+            } else {
+                return $this->errorResponse([], ['Attendance not done'], 403);
             }
         } catch (Exception $e) {
             return $this->errorResponse([
