@@ -16,7 +16,8 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'sqlite'),
+    // 'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION_LANDLORD', 'landloard'),
 
     /*
     |--------------------------------------------------------------------------
@@ -109,6 +110,23 @@ return [
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
 
+        'tenant' => [
+            'driver' => 'mysql',
+            // 'database' => 'attendance',
+            'database' => '', //tenant database will be select dynamically as per request
+            'host' => '127.0.0.1',
+            'username' => 'root',
+            'password' => 'Kathmandu@',
+        ],
+
+        'landlord' => [
+            'driver' => 'mysql',
+            'database' => 'landlord',
+            'host' => '127.0.0.1',
+            'username' => 'root',
+            'password' => 'Kathmandu@',
+        ],
+
     ],
 
     /*
@@ -144,7 +162,7 @@ return [
 
         'options' => [
             'cluster' => env('REDIS_CLUSTER', 'redis'),
-            'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_database_'),
+            'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_') . '_database_'),
         ],
 
         'default' => [

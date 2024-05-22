@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('universities', function (Blueprint $table) {
-            $table->uuid('university_id')->primary();
+            $table->increments('university_id')->primary();
             $table->string('university_name');
             $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
