@@ -14,15 +14,16 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/subscription', function () {
-    return view('subscription');
-});
+Route::get('/subscription/{plan?}', function ($plan = null) {
+    return view('subscription', ['selectedPlan' => $plan]);
+})->name('subscription.form');
 
 Route::post('/subscription', function (Request $request) {
 
     $validator = $request->validate([
         'domain' => 'required|string|unique:tenants',
-        'database' => 'required|string|min:6|max:50|unique:tenants'
+        'database' => 'required|string|min:6|max:50|unique:tenants',
+        'plan' => 'required|string|in:basic,standard,premium',
     ]);
     $university  = University::create(['university_name' => $request->university_name, 'status' => 'active']);
     $data        = Tenant::create(

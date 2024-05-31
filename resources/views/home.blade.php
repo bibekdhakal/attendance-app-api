@@ -238,7 +238,7 @@
                             </ul>
 
                             <div class="text-center mt-auto">
-                                <a href="#" class="buy-btn">Buy Now</a>
+                                <a href="{{ url('subscription', ['plan' => 'basic'])}}" class="buy-btn">Buy Now</a>
                             </div>
 
                         </div>
@@ -263,7 +263,7 @@
                             </ul>
 
                             <div class="text-center mt-auto">
-                                <a href="#" class="buy-btn">Buy Now</a>
+                                <a href="{{ route('subscription.form', ['plan' => 'standard'])}}" class="buy-btn">Buy Now</a>
                             </div>
 
                         </div>
@@ -286,7 +286,7 @@
                             </ul>
 
                             <div class="text-center mt-auto">
-                                <a href="#" class="buy-btn">Buy Now</a>
+                                <a href="{{ route('subscription.form', ['plan' => 'premium'])}}" class="buy-btn">Buy Now</a>
                             </div>
 
                         </div>
