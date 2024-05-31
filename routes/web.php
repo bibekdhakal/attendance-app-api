@@ -25,7 +25,7 @@ Route::post('/subscription', function (Request $request) {
     $validator = $request->validate([
         'university_name' => 'required|string',
         'domain' => 'required|string|unique:tenants',
-        'email' => 'required|email|unique:users',
+        'email' => 'required|email',
         'name' => 'required|string',
         'database' => 'required|string|min:6|max:50|unique:tenants',
         'plan' => 'required|string|in:basic,standard,premium',
