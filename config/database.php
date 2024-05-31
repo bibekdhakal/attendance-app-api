@@ -124,7 +124,7 @@ return [
             'database' => 'landlord',
             'host' => '127.0.0.1',
             'username' => env('DB_USERNAME_LANDLORD'),
-            'password' => env('DB_USERNAME_LANDLORD'),
+            'password' => env('DB_PASSWORD_LANDLORD'),
         ],
 
     ],
