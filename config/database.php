@@ -115,16 +115,16 @@ return [
             // 'database' => 'attendance',
             'database' => '', //tenant database will be select dynamically as per request
             'host' => '127.0.0.1',
-            'username' => 'root',
-            'password' => 'Kathmandu@',
+            'username' => env('DB_USERNAME_TENANT'),
+            'password' => env('DB_PASSWORD_TENANT'),
         ],
 
         'landlord' => [
             'driver' => 'mysql',
             'database' => 'landlord',
             'host' => '127.0.0.1',
-            'username' => 'root',
-            'password' => 'Kathmandu@',
+            'username' => env('DB_USERNAME_LANDLORD'),
+            'password' => env('DB_USERNAME_LANDLORD'),
         ],
 
     ],
