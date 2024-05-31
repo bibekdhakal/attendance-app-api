@@ -2,10 +2,12 @@
 
 use App\Models\Tenant;
 use App\Models\University;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Validation\Validator;
@@ -55,11 +57,15 @@ Route::post('/subscription', function (Request $request) {
     DB::setDefaultConnection('tenant');
 
     // Run migrations on the tenant database
-    Artisan::call('tenants:artisan', [
+    $artisan = Artisan::call('tenants:artisan', [
         'artisanCommand' => "migrate --database=$request->database --path=database/migrations/tenant",
         '--tenant' => $tenantId,
         '--databaseName' => $request->database
     ]);
 
-    return view('subscription');
+    if ($artisan) {
+        User::create(['name' => $request->get('name'), 'email' => $request->get('email'), 'password' => Hash::make('password'), 'campuse_id' => 1]);
+    }
+
+    return view('subscription', ['selectedPlan' => $request->get('plan')]);
 });

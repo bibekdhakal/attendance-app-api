@@ -56,6 +56,10 @@
         </div>
     </header><!-- End Header -->
     <main id="main" style="margin: 150px">
+        <div class="section-header">
+            <h2>Subscription</h2>
+            <p><strong>Buy {{$selectedPlan}} Plan</strong></p>
+        </div>
         <div class="col-lg-8">
             <form action="{{url('/subscription')}}" method="post" role="form" class="php-email-form">
                 @csrf

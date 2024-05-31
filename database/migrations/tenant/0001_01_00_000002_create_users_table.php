@@ -21,7 +21,7 @@ return new class extends Migration
             $table->enum('user_type', ['student', 'instrutor', 'admin'])->default('student');
             $table->enum('student_type', ['Online', 'In-campus', 'External'])->nullable();
             // $table->foreignUuid('campus_id')->references('campus_id')->on('campuses')->onDelete('cascade');
-            $table->unsignedInteger('campus_id');
+            $table->unsignedInteger('campus_id')->nullable();
             $table->foreign('campus_id')->references('campus_id')->on('campuses')->onDelete('cascade');
             $table->rememberToken();
             $table->index('user_id');
