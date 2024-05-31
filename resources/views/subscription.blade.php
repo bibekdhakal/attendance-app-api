@@ -61,27 +61,42 @@
                 @csrf
                 <div class="row">
                     <div class="col-md-6 form-group">
-                        <input type="text" name="university_name" class="form-control" id="university_name" placeholder="University Name" required>
+                        <input type="text" name="university_name" class="form-control @error('university_name') is-invalid @enderror" id="university_name" placeholder="University Name">
+                        @error('university_name')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="col-md-6 form-group mt-3 mt-md-0">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="Email">
+                        @error('email')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-6 form-group">
-                        <input type="text" name="name" class="form-control" id="shortname" placeholder="Short Name" required>
+                        <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="shortname" placeholder="Short Name">
+                        @error('name')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="col-md-6 form-group">
-                        <input type="text" name="domain" class="form-control" id="domain" placeholder="Domain" required>
+                        <input type="text" name="domain" class="form-control @error('domain') is-invalid @enderror" id="domain" placeholder="Domain">
+                        @error('domain')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-6 form-group">
-                        <input type="text" name="database" class="form-control" id="database" placeholder="Database Name" required>
+                        <input type="text" name="database" class="form-control @error('database') is-invalid @enderror" id="database" placeholder="Database Name">
+                        @error('database')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                 </div>
 
-                <div class="text-center mt-3"><button type="submit">Buy Now</button></div>
+                <div class="text-center mt-3"><button type="submit" class="btn btn-primary">Buy Now</button></div>
             </form>
         </div><!-- End Contact Form -->
     </main>
