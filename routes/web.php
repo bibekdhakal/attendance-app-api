@@ -66,9 +66,7 @@ Route::post('/subscription', function (Request $request) {
         '--databaseName' => $request->database
     ]);
 
-    if ($artisan) {
-        User::create(['name' => $request->get('name'), 'email' => $request->get('email'), 'password' => Hash::make('password'), 'campuse_id' => 1, 'user_type' => 'admin']);
-    }
+    User::create(['name' => $request->get('name'), 'email' => $request->get('email'), 'password' => Hash::make('password'), 'campuse_id' => 1, 'user_type' => 'admin']);
 
     return view('subscription', ['selectedPlan' => $request->get('plan')]);
 });
