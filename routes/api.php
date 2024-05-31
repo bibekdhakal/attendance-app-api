@@ -5,6 +5,8 @@ use App\Http\Controllers\API\UserController;
 use App\Http\Controllers\AttendanceController;
 use Illuminate\Support\Facades\Route;
 
+
+Route::get('universities', [ApiController::class, 'universities']);
 Route::group(['middleware' => ['switch.tenant']], function () {
     Route::post('login', [UserController::class, 'authenticate']);
     Route::post('user/create', [UserController::class, 'store']);

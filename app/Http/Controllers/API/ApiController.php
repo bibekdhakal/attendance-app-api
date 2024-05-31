@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Attendance_record;
 use App\Models\Campus;
 use App\Models\Unit;
+use App\Models\University;
 use App\Models\User;
 use App\Traits\ResponseTrait;
 use Exception;
@@ -66,6 +67,25 @@ class ApiController extends Controller
             } else {
                 return $this->errorResponse([], ['Attendance not done'], 403);
             }
+        } catch (Exception $e) {
+            return $this->errorResponse([
+                'message' => 'Internal Error',
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    public function universities()
+    {
+        try {
+            $universities  = University::select('university_name', 'universities.university_id', 'domain')
+                ->join('tenants', 'tenants.university_id', 'universities.university_id')
+                ->get();
+
+            if ($universities) {
+                return $this->successResponse($universities, ['University list'], 200);
+            }
+            return $this->errorResponse([], ['No university found'], 200);
         } catch (Exception $e) {
             return $this->errorResponse([
                 'message' => 'Internal Error',
