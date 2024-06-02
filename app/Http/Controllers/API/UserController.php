@@ -96,7 +96,6 @@ class UserController extends Controller
                 'name' => 'required|string',
                 'email' => 'required|email|unique:users',
                 'password' => 'required|string|min:6',
-                'status' => 'required|string',
                 'campus_id' => 'required|exists:campuses,campus_id',
                 'student_type' => 'required|string',
             ]);
@@ -106,7 +105,8 @@ class UserController extends Controller
                 "email" => $request->json()->get('email'),
                 "password" => bcrypt($request->json()->get('password')),
                 "student_type" => $request->json()->get('student_type'),
-                "campus_id" => $request->json()->get('campus_id')
+                "campus_id" => $request->json()->get('campus_id'),
+                "status" => "active"
             ];
 
             $user = User::create($jsonData);
