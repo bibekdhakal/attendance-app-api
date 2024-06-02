@@ -7,8 +7,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('universities', [ApiController::class, 'universities']);
-Route::post('user/create', [UserController::class, 'store']);
 Route::group(['middleware' => ['switch.tenant']], function () {
+    Route::post('user/create', [UserController::class, 'store']);
     Route::post('login', [UserController::class, 'authenticate']);
     Route::get('campuses', [ApiController::class, 'get_campuses']);
     Route::post('reset-password', [UserController::class, 'reset_password']);
