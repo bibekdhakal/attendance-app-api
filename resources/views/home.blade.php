@@ -92,7 +92,7 @@
                     </div>
 
                     <div class="col-lg-7">
-                        <h3 class="pt-0 pt-lg-5">Simplifying Attendance Management for Institutions and Organizations</h3>
+                        <h3 class="pt-0 pt-lg-5">Simplifying Attendance Management for Colleges and universities</h3>
 
                         <ul class="nav nav-pills mb-3">
                             <li><a class="nav-link active" data-bs-toggle="pill" href="#tab1">Here's what you can expect</a></li>
