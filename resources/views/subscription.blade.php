@@ -206,6 +206,7 @@
 
     <!-- Template Main JS File -->
     <script src="{{asset('assets/js/main.js')}}"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdSFvMpAAAAANOaK9qDI6Ue88j8ALseX7yMy4gR"></script>
 
 </body>
 
