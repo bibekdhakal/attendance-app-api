@@ -37,7 +37,7 @@
     <header id="header" class="header fixed-top" data-scrollto-offset="0">
         <div class="container-fluid d-flex align-items-center justify-content-between">
 
-            <a href="#hero-animated" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+            <a href="{{url('/')}}" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
                 <h1>Attendance App<span>.</span></h1>
             </a>
 
@@ -57,7 +57,7 @@
     </header><!-- End Header -->
     <main id="main" style="margin: 150px">
         <div class="section-header">
-            <h2>Subscription</h2>
+            <h2>Pricing</h2>
             <p><strong>Buy {{$selectedPlan}} Plan</strong></p>
         </div>
         <div class="col-lg-8">

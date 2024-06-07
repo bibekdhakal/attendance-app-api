@@ -60,8 +60,8 @@
     <section id="hero-animated" class="hero-animated d-flex align-items-center">
         <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
             <img src="assets/img/hero-carousel/hero-carousel-3.svg" class="img-fluid animated">
-            <h2>Welcome to <span>HeroBiz</span></h2>
-            <p>Et voluptate esse accusantium accusamus natus reiciendis quidem voluptates similique aut.</p>
+            <h2>Welcome to <span>Attendance App</span></h2>
+            <p>Streamline Your Attendance Management</p>
             <div class="d-flex">
                 <a href="#about" class="btn-get-started scrollto">Get Started</a>
                 <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
@@ -79,14 +79,12 @@
         <!-- ======= About Section ======= -->
         <section id="about" class="about">
             <div class="container" data-aos="fade-up">
-
                 <div class="section-header">
                     <h2>About Us</h2>
-                    <p>Architecto nobis eos vel nam quidem vitae temporibus voluptates qui hic deserunt iusto omnis nam voluptas asperiores sequi tenetur dolores incidunt enim voluptatem magnam cumque fuga.</p>
+                    <p>Tired of manually tracking attendance? Introducing the Attendance App, your one-stop solution for efficient and accurate attendance management.</p>
                 </div>
 
                 <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
-
                     <div class="col-lg-5">
                         <div class="about-img">
                             <img src="assets/img/about.jpg" class="img-fluid" alt="">
@@ -94,129 +92,151 @@
                     </div>
 
                     <div class="col-lg-7">
-                        <h3 class="pt-0 pt-lg-5">Neque officiis dolore maiores et exercitationem quae est seda lidera pat claero</h3>
+                        <h3 class="pt-0 pt-lg-5">Simplifying Attendance Management for Institutions and Organizations</h3>
 
-                        <!-- Tabs -->
                         <ul class="nav nav-pills mb-3">
-                            <li><a class="nav-link active" data-bs-toggle="pill" href="#tab1">Saepe fuga</a></li>
-                            <li><a class="nav-link" data-bs-toggle="pill" href="#tab2">Voluptates</a></li>
-                            <li><a class="nav-link" data-bs-toggle="pill" href="#tab3">Corrupti</a></li>
-                        </ul><!-- End Tabs -->
+                            <li><a class="nav-link active" data-bs-toggle="pill" href="#tab1">Here's what you can expect</a></li>
+                            <li><a class="nav-link" data-bs-toggle="pill" href="#tab2">Benefits</a></li>
+                            <li><a class="nav-link" data-bs-toggle="pill" href="#tab3">App Features</a></li>
+                        </ul>
 
-                        <!-- Tab Content -->
                         <div class="tab-content">
-
                             <div class="tab-pane fade show active" id="tab1">
-
-                                <p class="fst-italic">Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
+                                <div class="d-flex align-items-center mt-4">
+                                    <i class="bi bi-check2"></i>
+                                    <h4>Seamless Login</h4>
+                                </div>
+                                <p>Choose between email/password or secure biometric authentication for a quick and convenient login experience.</p>
 
                                 <div class="d-flex align-items-center mt-4">
                                     <i class="bi bi-check2"></i>
-                                    <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
+                                    <h4>Intuitive Interface</h4>
                                 </div>
-                                <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
+                                <p>Our user-friendly design ensures that both administrators and users can navigate the app with ease, minimizing training time and increasing productivity.</p>
 
                                 <div class="d-flex align-items-center mt-4">
                                     <i class="bi bi-check2"></i>
-                                    <h4>Incidunt non veritatis illum ea ut nisi</h4>
+                                    <h4>Real-time Attendance Tracking</h4>
                                 </div>
-                                <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et perferendis.</p>
-
-                                <div class="d-flex align-items-center mt-4">
-                                    <i class="bi bi-check2"></i>
-                                    <h4>Omnis ab quia nemo dignissimos rem eum quos..</h4>
-                                </div>
-                                <p>Eius alias aut cupiditate. Dolor voluptates animi ut blanditiis quos nam. Magnam officia aut ut alias quo explicabo ullam esse. Sunt magnam et dolorem eaque magnam odit enim quaerat. Vero error error voluptatem eum.</p>
-
-                            </div><!-- End Tab 1 Content -->
+                                <p>Instantly record and monitor attendance with real-time updates, ensuring accuracy and reducing administrative workload.</p>
+                            </div>
 
                             <div class="tab-pane fade show" id="tab2">
-
-                                <p class="fst-italic">Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
-
-                                <div class="d-flex align-items-center mt-4">
-                                    <i class="bi bi-check2"></i>
-                                    <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
-                                </div>
-                                <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
+                                <p class="fst-italic">Discover the advantages of using our Attendance App for your organization:</p>
 
                                 <div class="d-flex align-items-center mt-4">
                                     <i class="bi bi-check2"></i>
-                                    <h4>Incidunt non veritatis illum ea ut nisi</h4>
+                                    <h4>Pay-As-You-Go Model</h4>
                                 </div>
-                                <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et perferendis.</p>
+                                <p>With a "Go as you pay" approach, the app offers customizable pricing plans, allowing users to pay for the features and usage they need without unnecessary overhead costs.</p>
 
                                 <div class="d-flex align-items-center mt-4">
                                     <i class="bi bi-check2"></i>
-                                    <h4>Omnis ab quia nemo dignissimos rem eum quos..</h4>
+                                    <h4>Increased Efficiency</h4>
                                 </div>
-                                <p>Eius alias aut cupiditate. Dolor voluptates animi ut blanditiis quos nam. Magnam officia aut ut alias quo explicabo ullam esse. Sunt magnam et dolorem eaque magnam odit enim quaerat. Vero error error voluptatem eum.</p>
+                                <p>Streamline the attendance process, saving time and reducing errors associated with manual tracking.</p>
 
-                            </div><!-- End Tab 2 Content -->
+                                <div class="d-flex align-items-center mt-4">
+                                    <i class="bi bi-check2"></i>
+                                    <h4>Enhanced Accuracy</h4>
+                                </div>
+                                <p>Automated calculations and real-time updates eliminate discrepancies and ensure precise attendance records.</p>
+
+                                <div class="d-flex align-items-center mt-4">
+                                    <i class="bi bi-check2"></i>
+                                    <h4>Improved Data Management</h4>
+                                </div>
+                                <p>Easily access, analyze, and export attendance data for reporting and decision-making purposes.</p>
+                                <div class="d-flex align-items-center mt-4">
+                                    <i class="bi bi-check2"></i>
+                                    <h4>Continuous Updates and Support</h4>
+                                </div>
+                                <p>The Attendance App is regularly updated with new features, enhancements, and security patches. It also offers comprehensive technical support to address user queries and issues promptly.</p>
+                                <div class="d-flex align-items-center mt-4">
+                                    <i class="bi bi-check2"></i>
+                                    <h4>Scalability and Security</h4>
+                                </div>
+                                <p>Built on robust technology frameworks, the app ensures scalability to accommodate growing user bases and data volumes. It prioritizes data security and compliance with industry standards, safeguarding sensitive information.</p>
+
+                                <div class="d-flex align-items-center mt-4">
+                                    <i class="bi bi-check2"></i>
+                                    <h4>User-Friendly Interface</h4>
+                                </div>
+                                <p>With an intuitive and user-friendly interface, the app caters to users of all technical proficiencies, minimizing the learning curve and maximizing adoption rates.</p>
+
+                            </div>
 
                             <div class="tab-pane fade show" id="tab3">
-
-                                <p class="fst-italic">Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
-
-                                <div class="d-flex align-items-center mt-4">
-                                    <i class="bi bi-check2"></i>
-                                    <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
-                                </div>
-                                <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
+                                <p class="fst-italic">Key Features:</p>
 
                                 <div class="d-flex align-items-center mt-4">
                                     <i class="bi bi-check2"></i>
-                                    <h4>Incidunt non veritatis illum ea ut nisi</h4>
+                                    <h4>Multi-Tenant Architecture</h4>
                                 </div>
-                                <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et perferendis.</p>
+                                <p>Our app utilizes a single application to manage multiple databases, providing flexibility and scalability for institutions of all sizes.</p>
 
                                 <div class="d-flex align-items-center mt-4">
                                     <i class="bi bi-check2"></i>
-                                    <h4>Omnis ab quia nemo dignissimos rem eum quos..</h4>
+                                    <h4>Geographic Binding for In-Campus Students</h4>
                                 </div>
-                                <p>Eius alias aut cupiditate. Dolor voluptates animi ut blanditiis quos nam. Magnam officia aut ut alias quo explicabo ullam esse. Sunt magnam et dolorem eaque magnam odit enim quaerat. Vero error error voluptatem eum.</p>
+                                <p>Specifically designed for in-campus students, the app provides geographic binding features, ensuring that students can only check in for attendance within designated campus locations. This enhances accuracy and prevents fraudulent attendance.</p>
 
-                            </div><!-- End Tab 3 Content -->
+                                <div class="d-flex align-items-center mt-4">
+                                    <i class="bi bi-check2"></i>
+                                    <h4>Efficient Attendance Tracking</h4>
+                                </div>
+                                <p>The Attendance App simplifies attendance management with seamless login options, including email/password and biometric authentication. Quick and convenient access is guaranteed.</p>
+
+                                <div class="d-flex align-items-center mt-4">
+                                    <i class="bi bi-check2"></i>
+                                    <h4>Real-Time Monitoring</h4>
+                                </div>
+                                <p>Administrators can monitor attendance records in real-time, gaining insights into attendance patterns, trends, and anomalies. This facilitates proactive decision-making and intervention when needed.</p>
+
+                                <div class="d-flex align-items-center mt-4">
+                                    <i class="bi bi-check2"></i>
+                                    <h4>Customizable Reporting</h4>
+                                </div>
+                                <p>The app generates detailed attendance reports, allowing administrators to analyze attendance data based on various parameters such as time, location, and student demographics. Reports can be customized to meet specific institutional requirements.</p>
+
+                                <div class="d-flex align-items-center mt-4">
+                                    <i class="bi bi-check2"></i>
+                                    <h4>Integration Capabilities</h4>
+                                </div>
+                                <p>Seamless integration with existing student information systems (SIS), learning management systems (LMS), and other educational platforms ensures data synchronization and interoperability.</p>
+
+                            </div>
 
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-        </section><!-- End About Section -->
+        </section>
 
-        <!-- ======= Call To Action Section ======= -->
+
+
         <section id="cta" class="cta">
             <div class="container" data-aos="zoom-out">
-
                 <div class="row g-5">
-
                     <div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
-                        <h3>Alias sunt quas <em>Cupiditate</em> oluptas hic minima</h3>
-                        <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <a class="cta-btn align-self-start" href="#">Call To Action</a>
+                        <h3>Experience the Power of Automated Attendance Management</h3>
+                        <p>Make attendance tracking effortless with our Attendance App. Say goodbye to manual processes and embrace the efficiency of automated attendance management.</p>
+                        <a class="cta-btn align-self-start" href="#">Get Started</a>
                     </div>
-
                     <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
                         <div class="img">
                             <img src="assets/img/cta.jpg" alt="" class="img-fluid">
                         </div>
                     </div>
-
                 </div>
-
             </div>
-        </section><!-- End Call To Action Section -->
-
-        <!-- ======= Pricing Section ======= -->
+        </section>
         <section id="pricing" class="pricing">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-header">
                     <h2>Our Pricing</h2>
-                    <p>Architecto nobis eos vel nam quidem vitae temporibus voluptates qui hic deserunt iusto omnis nam voluptas asperiores sequi tenetur dolores incidunt enim voluptatem magnam cumque fuga.</p>
+                    <p>Choose the plan that best suits your needs.</p>
                 </div>
 
                 <div class="row gy-4">
@@ -225,41 +245,37 @@
                         <div class="pricing-item">
 
                             <div class="pricing-header">
-                                <h3>Free Plan</h3>
+                                <h3>Basic Plan</h3>
                                 <h4><sup>$</sup>0<span> / month</span></h4>
                             </div>
 
                             <ul>
-                                <li><i class="bi bi-dot"></i> <span>Quam adipiscing vitae proin</span></li>
-                                <li><i class="bi bi-dot"></i> <span>Nec feugiat nisl pretium</span></li>
-                                <li><i class="bi bi-dot"></i> <span>Nulla at volutpat diam uteera</span></li>
-                                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-                                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Basic attendance tracking</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Real-time updates</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Limited support</span></li>
+                                <li><i class="bi bi-x"></i> <span>No advanced features</span></li>
                             </ul>
 
                             <div class="text-center mt-auto">
-                                <a href="{{ url('subscription', ['plan' => 'basic'])}}" class="buy-btn">Buy Now</a>
+                                <a href="{{ route('subscription.form', ['plan' => 'basic'])}}" class="buy-btn">Buy Now</a>
                             </div>
 
                         </div>
-                    </div><!-- End Pricing Item -->
+                    </div><!-- End Basic Plan -->
 
                     <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="400">
                         <div class="pricing-item featured">
 
                             <div class="pricing-header">
-                                <h3>Business Plan</h3>
+                                <h3>Standard Plan</h3>
                                 <h4><sup>$</sup>29<span> / month</span></h4>
                             </div>
 
                             <ul>
-                                <li><i class="bi bi-dot"></i> <span>Quam adipiscing vitae proin</span></li>
-                                <li><i class="bi bi-dot"></i> <span>Nec feugiat nisl pretium</span></li>
-                                <li><i class="bi bi-dot"></i> <span>Nulla at volutpat diam uteera</spa>
-                                </li>
-                                <li><i class="bi bi-dot"></i> <span>Pharetra massa massa ultricies</spa>
-                                </li>
-                                <li><i class="bi bi-dot"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Advanced attendance tracking</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Customizable reporting</span></li>
+                                <li><i class="bi bi-check2"></i> <span>24/7 support</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Integration capabilities</span></li>
                             </ul>
 
                             <div class="text-center mt-auto">
@@ -267,22 +283,21 @@
                             </div>
 
                         </div>
-                    </div><!-- End Pricing Item -->
+                    </div><!-- End Standard Plan -->
 
                     <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="600">
                         <div class="pricing-item">
 
                             <div class="pricing-header">
-                                <h3>Developer Plan</h3>
+                                <h3>Premium Plan</h3>
                                 <h4><sup>$</sup>49<span> / month</span></h4>
                             </div>
 
                             <ul>
-                                <li><i class="bi bi-dot"></i> <span>Quam adipiscing vitae proin</span></li>
-                                <li><i class="bi bi-dot"></i> <span>Nec feugiat nisl pretium</span></li>
-                                <li><i class="bi bi-dot"></i> <span>Nulla at volutpat diam uteera</span></li>
-                                <li><i class="bi bi-dot"></i> <span>Pharetra massa massa ultricies</span></li>
-                                <li><i class="bi bi-dot"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Advanced attendance tracking</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Customizable reporting</span></li>
+                                <li><i class="bi bi-check2"></i> <span>24/7 priority support</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Integration capabilities</span></li>
                             </ul>
 
                             <div class="text-center mt-auto">
@@ -290,15 +305,15 @@
                             </div>
 
                         </div>
-                    </div><!-- End Pricing Item -->
+                    </div><!-- End Premium Plan -->
 
                 </div>
 
             </div>
-        </section><!-- End Pricing Section -->
+        </section>
 
 
-        <!-- ======= Testimonials Section ======= -->
+
         <section id="testimonials" class="testimonials">
             <div class="container" data-aos="fade-up">
 
@@ -308,14 +323,14 @@
                         <div class="swiper-slide">
                             <div class="testimonial-item">
                                 <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                                <h3>Saul Goodman</h3>
-                                <h4>Ceo &amp; Founder</h4>
+                                <h3>John Doe</h3>
+                                <h4>School Administrator</h4>
                                 <div class="stars">
                                     <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                                 </div>
                                 <p>
                                     <i class="bi bi-quote quote-icon-left"></i>
-                                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                                    The Attendance App has revolutionized our attendance tracking process. With its intuitive interface and real-time monitoring features, managing student attendance has become effortless. Highly recommended!
                                     <i class="bi bi-quote quote-icon-right"></i>
                                 </p>
                             </div>
@@ -324,14 +339,14 @@
                         <div class="swiper-slide">
                             <div class="testimonial-item">
                                 <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                                <h3>Sara Wilsson</h3>
-                                <h4>Designer</h4>
+                                <h3>Jane Smith</h3>
+                                <h4>Teacher</h4>
                                 <div class="stars">
                                     <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                                 </div>
                                 <p>
                                     <i class="bi bi-quote quote-icon-left"></i>
-                                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                                    As a teacher, I appreciate how the Attendance App streamlines our daily routines. It's incredibly user-friendly, and the customizable reporting feature helps me analyze student attendance patterns effectively.
                                     <i class="bi bi-quote quote-icon-right"></i>
                                 </p>
                             </div>
@@ -340,46 +355,14 @@
                         <div class="swiper-slide">
                             <div class="testimonial-item">
                                 <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                                <h3>Jena Karlis</h3>
-                                <h4>Store Owner</h4>
+                                <h3>David Johnson</h3>
+                                <h4>Parent</h4>
                                 <div class="stars">
                                     <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                                 </div>
                                 <p>
                                     <i class="bi bi-quote quote-icon-left"></i>
-                                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                                    <i class="bi bi-quote quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                                <h3>Matt Brandon</h3>
-                                <h4>Freelancer</h4>
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
-                                    <i class="bi bi-quote quote-icon-left"></i>
-                                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                                    <i class="bi bi-quote quote-icon-right"></i>
-                                </p>
-                            </div>
-                        </div><!-- End testimonial item -->
-
-                        <div class="swiper-slide">
-                            <div class="testimonial-item">
-                                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                                <h3>John Larson</h3>
-                                <h4>Entrepreneur</h4>
-                                <div class="stars">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                </div>
-                                <p>
-                                    <i class="bi bi-quote quote-icon-left"></i>
-                                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                                    With the Attendance App, I can easily track my child's attendance and ensure they're attending classes regularly. The geographic binding feature adds an extra layer of security, giving me peace of mind.
                                     <i class="bi bi-quote quote-icon-right"></i>
                                 </p>
                             </div>
@@ -392,103 +375,64 @@
             </div>
         </section><!-- End Testimonials Section -->
 
+
         <!-- ======= F.A.Q Section ======= -->
         <section id="faq" class="faq">
             <div class="container-fluid" data-aos="fade-up">
-
                 <div class="row gy-4">
-
-                    <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
-
+                    <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-2 order-lg-1">
                         <div class="content px-xl-5">
                             <h3>Frequently Asked <strong>Questions</strong></h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                            </p>
+                            <p>Explore answers to common inquiries about our Attendance App:</p>
                         </div>
-
                         <div class="accordion accordion-flush px-xl-5" id="faqlist">
-
                             <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
                                 <h3 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
                                         <i class="bi bi-question-circle question-icon"></i>
-                                        Non consectetur a erat nam at lectus urna duis?
+                                        How does the Attendance App work?
                                     </button>
                                 </h3>
                                 <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                                     <div class="accordion-body">
-                                        Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                                        The Attendance App simplifies attendance management by providing seamless login options and real-time tracking features. Users can choose between email/password or biometric authentication for secure access. Once logged in, administrators can monitor attendance records in real-time and generate customizable reports.
                                     </div>
                                 </div>
-                            </div><!-- # Faq item-->
-
+                            </div>
                             <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
                                 <h3 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
                                         <i class="bi bi-question-circle question-icon"></i>
-                                        Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+                                        Is the Attendance App suitable for large institutions?
                                     </button>
                                 </h3>
                                 <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                                     <div class="accordion-body">
-                                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                                        Yes, the Attendance App is designed to accommodate institutions of all sizes. Its multi-tenant architecture allows for scalability, making it suitable for both small organizations and large universities.
                                     </div>
                                 </div>
-                            </div><!-- # Faq item-->
-
+                            </div>
                             <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
                                 <h3 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
                                         <i class="bi bi-question-circle question-icon"></i>
-                                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
+                                        Can I integrate the Attendance App with other systems?
                                     </button>
                                 </h3>
                                 <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
                                     <div class="accordion-body">
-                                        Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                                        Yes, the Attendance App offers seamless integration capabilities with existing student information systems (SIS), learning management systems (LMS), and other educational platforms. This ensures data synchronization and interoperability.
                                     </div>
                                 </div>
-                            </div><!-- # Faq item-->
-
-                            <div class="accordion-item" data-aos="fade-up" data-aos-delay="500">
-                                <h3 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
-                                        <i class="bi bi-question-circle question-icon"></i>
-                                        Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
-                                    </button>
-                                </h3>
-                                <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                                    <div class="accordion-body">
-                                        <i class="bi bi-question-circle question-icon"></i>
-                                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                                    </div>
-                                </div>
-                            </div><!-- # Faq item-->
-
-                            <div class="accordion-item" data-aos="fade-up" data-aos-delay="600">
-                                <h3 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-5">
-                                        <i class="bi bi-question-circle question-icon"></i>
-                                        Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
-                                    </button>
-                                </h3>
-                                <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                                    <div class="accordion-body">
-                                        Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
-                                    </div>
-                                </div>
-                            </div><!-- # Faq item-->
-
+                            </div>
+                            <!-- Add more FAQ items here -->
                         </div>
-
                     </div>
-
                     <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/faq.jpg");'>&nbsp;</div>
                 </div>
-
             </div>
         </section><!-- End F.A.Q Section -->
+
 
         <!-- ======= Contact Section ======= -->
         <section id="contact" class="contact">
@@ -508,13 +452,15 @@
 
                         <div class="info">
                             <h3>Get in touch</h3>
-                            <p>Et id eius voluptates atque nihil voluptatem enim in tempore minima sit ad mollitia commodi minus.</p>
+                            <p>Have questions or want to learn more about our Attendance App? Feel free to reach out to us. We're here to help!</p>
+                            <p>Whether you're interested in a demo, have inquiries about our pricing plans, or need assistance with setting up your account, our team is ready to assist you every step of the way.</p>
+                            <p>Simply fill out the form below, and one of our representatives will get back to you as soon as possible.</p>
 
                             <div class="info-item d-flex">
                                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                                 <div>
                                     <h4>Location:</h4>
-                                    <p>A108 Adam Street, New York, NY 535022</p>
+                                    <p>Haymarket, Central, Sdyney, Australia</p>
                                 </div>
                             </div><!-- End Info Item -->
 
@@ -522,7 +468,7 @@
                                 <i class="bi bi-envelope flex-shrink-0"></i>
                                 <div>
                                     <h4>Email:</h4>
-                                    <p>info@example.com</p>
+                                    <p>manepali.bibek@gmail.com</p>
                                 </div>
                             </div><!-- End Info Item -->
 
@@ -579,12 +525,12 @@
 
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-info">
-                            <h3>HeroBiz</h3>
+                            <h3>Attendance App</h3>
                             <p>
-                                A108 Adam Street <br>
-                                NY 535022, USA<br><br>
-                                <strong>Phone:</strong> +1 5589 55488 55<br>
-                                <strong>Email:</strong> info@example.com<br>
+                                Haymarket, Central <br>
+                                Sydney, NSW, Australia<br><br>
+                                <strong>Phone:</strong> +61- 466958969<br>
+                                <strong>Email:</strong> manepali.bibek@gmail.com<br>
                             </p>
                         </div>
                     </div>
