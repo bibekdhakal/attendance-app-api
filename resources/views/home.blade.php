@@ -485,7 +485,7 @@
                     </div>
 
                     <div class="col-lg-8">
-                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                        <form action="#" method="post" role="form" class="php-email-form" id="contact-form">
                             <div class="row">
                                 <div class="col-md-6 form-group">
                                     <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -613,6 +613,8 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdSFvMpAAAAANOaK9qDI6Ue88j8ALseX7yMy4gR"></script>
 
 </body>
 
