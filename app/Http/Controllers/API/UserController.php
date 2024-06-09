@@ -26,7 +26,6 @@ class UserController extends Controller
         $credentials = [
             'email' => $request->get('email'),
             'password' => $request->get('password'),
-            'user_type' => 'student'
         ];
 
         $validator = Validator::make($credentials, [
@@ -39,6 +38,12 @@ class UserController extends Controller
         }
 
         try {
+            $user = User::where('email', $request->get('email'))->where('device_id', $request->get('device_id'))->first();
+            if (!$user) {
+                return $this->errorResponse([
+                    'message' => 'You are using new device to login. Please reactive your account for new device.',
+                ], 401);
+            }
             // Attempt to generate a JWT token
             if (!$token = JWTAuth::attempt($credentials)) {
                 // Return error response for invalid credentials
@@ -106,7 +111,7 @@ class UserController extends Controller
                 "password" => bcrypt($request->json()->get('password')),
                 "student_type" => $request->json()->get('student_type'),
                 "campus_id" => $request->json()->get('campus_id'),
-                "status" => "active"
+                "device_id" => $request->json()->get('device_id')
             ];
 
             $user = User::create($jsonData);
