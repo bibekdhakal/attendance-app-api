@@ -1,5 +1,6 @@
 <?php
 
+use App\Mail\SubscriptionMail;
 use App\Models\Tenant;
 use App\Models\University;
 use App\Models\User;
@@ -9,6 +10,7 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Validation\Validator;
 
@@ -67,6 +69,11 @@ Route::post('/subscription', function (Request $request) {
     ]);
 
     User::create(['name' => $request->get('name'), 'email' => $request->get('email'), 'password' => Hash::make('password'), 'campuse_id' => 1, 'user_type' => 'admin']);
+
+    // $title = 'Subscription Purchase';
+    // $body = 'Thank you for purchasing subcription! The admin user has been created. Use accordingly.';
+
+    // Mail::to('manepali.bibek@gmail.com')->send(new SubscriptionMail($title, $body));
 
     return view('subscription', ['selectedPlan' => $request->get('plan')]);
 });

@@ -41,6 +41,7 @@ class MigrateTenant extends Command
         DB::setDefaultConnection('tenant');
 
         // Run migrations for the specified path
+        // Artisan::call($artisanCommand, ['--force' => true, '--path' => 'database/migrations/tenant']);
         Artisan::call('migrate', ['--force' => true, '--path' => 'database/migrations/tenant']);
 
         $this->info("Command '$artisanCommand' run for tenant '$database'.");
