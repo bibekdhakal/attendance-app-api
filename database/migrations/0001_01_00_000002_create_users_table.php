@@ -23,6 +23,7 @@ return new class extends Migration
             // $table->foreignUuid('campus_id')->references('campus_id')->on('campuses')->onDelete('cascade');
             $table->unsignedInteger('campus_id');
             $table->foreign('campus_id')->references('campus_id')->on('campuses')->onDelete('cascade');
+            $table->string('device_id')->nullable();
             $table->rememberToken();
             $table->index('user_id');
             $table->timestamps();
