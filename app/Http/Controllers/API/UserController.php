@@ -101,6 +101,7 @@ class UserController extends Controller
                 'name' => 'required|string',
                 'email' => 'required|email|unique:users',
                 'password' => 'required|string|min:6',
+                'status' => 'required|string',
                 'campus_id' => 'required|exists:campuses,campus_id',
                 'student_type' => 'required|string',
             ]);
