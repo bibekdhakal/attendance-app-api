@@ -111,7 +111,8 @@ class UserController extends Controller
                 "email" => $request->json()->get('email'),
                 "password" => bcrypt($request->json()->get('password')),
                 "student_type" => $request->json()->get('student_type'),
-                "campus_id" => $request->json()->get('campus_id')
+                "campus_id" => $request->json()->get('campus_id'),
+                "device_id" => $request->json()->get('device_id')
             ];
 
             $user = User::create($jsonData);
