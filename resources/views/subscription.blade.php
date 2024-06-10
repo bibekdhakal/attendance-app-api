@@ -46,67 +46,78 @@
 
                     <li><a class="nav-link scrollto" href="{{url('/')}}">Home</a></li>
                     <li><a class="nav-link scrollto" href="#about">About</a></li>
-                    <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
+                    <li><a class="nav-link active scrollto" href="#pricing">Pricing</a></li>
                     <li><a class="nav-link scrollto" href="#faq">FAQs</a></li>
-                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    <li><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle d-none"></i>
             </nav><!-- .navbar -->
 
         </div>
-    </header><!-- End Header -->
-    <main id="main" style="margin: 150px">
-        <div class="section-header">
-            <h2>Pricing</h2>
-            <p><strong>Buy {{$selectedPlan}} Plan</strong></p>
-        </div>
-        <div class="col-lg-8">
-            <form action="{{url('/subscription')}}" method="post" role="form" class="php-email-form">
-                @csrf
-                <div class="row">
-                    <div class="col-md-6 form-group">
-                        <input type="text" name="university_name" class="form-control @error('university_name') is-invalid @enderror" id="university_name" placeholder="University Name">
-                        @error('university_name')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="col-md-6 form-group mt-3 mt-md-0">
-                        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="Email">
-                        @error('email')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
+    </header>
+    <main id="main">
+        <section id="contact" class="contact">
+            <div class="container">
+
+                <div class="section-header">
+                    <h2>Pricing</h2>
+                    <p>Buy {{$selectedPlan}} Plan</p>
                 </div>
-                <div class="row mt-3">
-                    <div class="col-md-6 form-group">
-                        <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="shortname" placeholder="Short Name">
-                        @error('name')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="col-md-6 form-group">
-                        <input type="text" name="domain" class="form-control @error('domain') is-invalid @enderror" id="domain" placeholder="Domain">
-                        @error('domain')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
+
+            </div>
+            <div class="container">
+
+                <div class="row gy-5 gx-lg-5">
+                    <div class="col-lg-8">
+                        <form action="{{url('/subscription')}}" method="post" role="form" class="php-email-form">
+                            @csrf
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="university_name" class="form-control @error('university_name') is-invalid @enderror" id="university_name" placeholder="University Name">
+                                    @error('university_name')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="col-md-6 form-group mt-3 mt-md-0">
+                                    <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="Email">
+                                    @error('email')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="shortname" placeholder="Short Name">
+                                    @error('name')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="domain" class="form-control @error('domain') is-invalid @enderror" id="domain" placeholder="Domain">
+                                    @error('domain')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="database" class="form-control @error('database') is-invalid @enderror" id="database" placeholder="Database Name">
+                                    @error('database')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <select id="plan" name="plan" required hidden>
+                                <option value="basic" {{ $selectedPlan == 'basic' ? 'selected' : '' }}>Basic</option>
+                                <option value="standard" {{ $selectedPlan == 'standard' ? 'selected' : '' }}>Standard</option>
+                                <option value="premium" {{ $selectedPlan == 'premium' ? 'selected' : '' }}>Premium</option>
+                            </select>
+                            <div class="text-center mt-3"><button type="submit" class="btn btn-primary">Buy Now</button></div>
+                        </form>
+                    </div><!-- End Contact Form -->
                 </div>
-                <div class="row mt-3">
-                    <div class="col-md-6 form-group">
-                        <input type="text" name="database" class="form-control @error('database') is-invalid @enderror" id="database" placeholder="Database Name">
-                        @error('database')
-                        <div class="alert alert-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                </div>
-                <select id="plan" name="plan" required hidden>
-                    <option value="basic" {{ $selectedPlan == 'basic' ? 'selected' : '' }}>Basic</option>
-                    <option value="standard" {{ $selectedPlan == 'standard' ? 'selected' : '' }}>Standard</option>
-                    <option value="premium" {{ $selectedPlan == 'premium' ? 'selected' : '' }}>Premium</option>
-                </select>
-                <div class="text-center mt-3"><button type="submit" class="btn btn-primary">Buy Now</button></div>
-            </form>
-        </div><!-- End Contact Form -->
+            </div>
+        </section>
     </main>
 
     <!-- ======= Footer ======= -->
