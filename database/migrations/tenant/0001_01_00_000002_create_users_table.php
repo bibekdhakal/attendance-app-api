@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->enum('user_type', ['student', 'instrutor', 'admin'])->default('student');
+            $table->enum('user_type', ['student', 'instructor', 'admin'])->default('student');
             $table->enum('student_type', ['Online', 'In-campus', 'External'])->nullable();
             // $table->foreignUuid('campus_id')->references('campus_id')->on('campuses')->onDelete('cascade');
             $table->unsignedInteger('campus_id')->nullable();
