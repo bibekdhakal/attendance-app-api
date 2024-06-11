@@ -4,9 +4,9 @@
 
 <body>
     <div class="container-scroller">
-        <x-sidebar />
+        <x-navbar />
         <div class="container-fluid page-body-wrapper">
-            <x-navbar />
+            <x-sidebar />
             <div class="main-panel">
                 @yield('content')
                 <x-footer />
