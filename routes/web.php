@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Administrator\AttendanceController;
 use App\Http\Controllers\Administrator\CampusController;
 use App\Http\Controllers\Administrator\UnitController;
 use App\Http\Controllers\Administrator\UserController;
@@ -16,4 +17,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('campuses', [CampusController::class, 'index'])->name('campuses.index');
     Route::get('campuses/create', [CampusController::class, 'create'])->name('campuses.create');
     Route::get('students', [UserController::class, 'students']);
+    Route::get('attendance', [AttendanceController::class, 'index']);
 });
