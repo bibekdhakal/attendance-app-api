@@ -16,6 +16,7 @@ class CampusController extends Controller
 
     public function create()
     {
+        return view('administrators.campus.create');
     }
 
     public function store(Request $request)

@@ -14,16 +14,33 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="{{url('/dashboard')}}">
                 <span class="menu-title">Dashboard</span>
                 <i class="mdi mdi-home menu-icon"></i>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
-                <span class="menu-title">Campuses</span>
+                <span class="menu-title">Students</span>
                 <i class="menu-arrow"></i>
                 <i class="mdi mdi-contacts menu-icon"></i>
+            </a>
+            <div class="collapse" id="icons">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('/students')}}">List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Create</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+                <span class="menu-title">Campuses</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-format-list-bulleted menu-icon"></i>
             </a>
             <div class="collapse" id="icons">
                 <ul class="nav flex-column sub-menu">
@@ -31,7 +48,7 @@
                         <a class="nav-link" href="{{url('/campuses')}}">List</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Create</a>
+                        <a class="nav-link" href="{{url('/campuses/create')}}">Create</a>
                     </li>
                 </ul>
             </div>
@@ -48,7 +65,7 @@
                         <a class="nav-link" href="{{url('/units')}}">List</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/forms/basic_elements.html">Create</a>
+                        <a class="nav-link" href="{{url('/units/create')}}">Create</a>
                     </li>
                 </ul>
             </div>

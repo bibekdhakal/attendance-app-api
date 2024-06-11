@@ -16,6 +16,7 @@ class UnitController extends Controller
 
     public function create()
     {
+        return view('administrators.unit.create');
     }
 
     public function store(Request $request)
