@@ -7,8 +7,8 @@
                     <span class="login-status online"></span>
                 </div>
                 <div class="nav-profile-text d-flex flex-column">
-                    <span class="font-weight-bold mb-2">David Grey. H</span>
-                    <span class="text-secondary text-small">Project Manager</span>
+                    <span class="font-weight-bold mb-2">{{Auth::user()->name}}</span>
+                    <!-- <span class="text-secondary text-small">Project Manager</span> -->
                 </div>
                 <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
             </a>
@@ -20,12 +20,12 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+            <a class="nav-link" data-bs-toggle="collapse" href="#students" aria-expanded="false" aria-controls="students">
                 <span class="menu-title">Students</span>
                 <i class="menu-arrow"></i>
                 <i class="mdi mdi-contacts menu-icon"></i>
             </a>
-            <div class="collapse" id="icons">
+            <div class="collapse" id="students">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/students')}}">List</a>
@@ -37,12 +37,12 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+            <a class="nav-link" data-bs-toggle="collapse" href="#attedance" aria-expanded="false" aria-controls="attedance">
                 <span class="menu-title">Attendance</span>
                 <i class="menu-arrow"></i>
                 <i class="mdi mdi-chart-bar menu-icon"></i>
             </a>
-            <div class="collapse" id="icons">
+            <div class="collapse" id="attedance">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/attendance')}}">List</a>
@@ -51,12 +51,12 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+            <a class="nav-link" data-bs-toggle="collapse" href="#campus" aria-expanded="false" aria-controls="campus">
                 <span class="menu-title">Campuses</span>
                 <i class="menu-arrow"></i>
                 <i class="mdi mdi-format-list-bulleted menu-icon"></i>
             </a>
-            <div class="collapse" id="icons">
+            <div class="collapse" id="campus">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/campuses')}}">List</a>
@@ -68,12 +68,12 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#forms" aria-expanded="false" aria-controls="forms">
+            <a class="nav-link" data-bs-toggle="collapse" href="#unit" aria-expanded="false" aria-controls="unit">
                 <span class="menu-title">Units</span>
                 <i class="menu-arrow"></i>
                 <i class="mdi mdi-format-list-bulleted menu-icon"></i>
             </a>
-            <div class="collapse" id="forms">
+            <div class="collapse" id="unit">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/units')}}">List</a>
