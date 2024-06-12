@@ -31,7 +31,7 @@
                                 <td>{{$campus->campus_name}}</td>
                                 <td>{{$campus->latitude}}</td>
                                 <td>{{$campus->longitude}}</td>
-                                <td><button type="button" class="badge badge-info">Update</button></td>
+                                <td><a href="{{url('campuses/edit', $campus->campus_id)}}" class="badge badge-info">Update</button></td>
                             </tr>
                             @endforeach
                         </tbody>

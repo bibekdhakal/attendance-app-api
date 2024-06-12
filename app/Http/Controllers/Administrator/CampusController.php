@@ -38,4 +38,27 @@ class CampusController extends Controller
     public function show($id)
     {
     }
+
+    public function edit($id)
+    {
+        $campus = Campus::findOrFail($id);
+        return view('administrators.campus.edit', ['campus' => $campus]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $this->validate($request, [
+            'campus_name' => 'required|string',
+            'latitude' => 'required',
+            'longitude' => 'required'
+        ]);
+
+        $campus = Campus::findOrFail($id);
+        $campus->campus_name = $request->get('campus_name');
+        $campus->latitude = $request->get('latitude');
+        $campus->longitude = $request->get('longitude');
+        $campus->save();
+
+        return back()->with('success', 'Campus is updated successfully');
+    }
 }

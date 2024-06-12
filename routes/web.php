@@ -18,6 +18,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('campuses', [CampusController::class, 'index'])->name('campuses.index');
     Route::get('campuses/create', [CampusController::class, 'create'])->name('campuses.create');
     Route::post('campuses/store', [CampusController::class, 'store'])->name('campuses.store');
+    Route::get('campuses/edit/{id}', [CampusController::class, 'edit'])->name('campuses.edit');
+    Route::post('campuses/update/{id}', [CampusController::class, 'update'])->name('campuses.update');
     Route::get('students', [UserController::class, 'students']);
     Route::get('attendance', [AttendanceController::class, 'index']);
 });
