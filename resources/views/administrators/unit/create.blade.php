@@ -14,12 +14,14 @@
         <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <!-- <h4 class="card-title">Default form</h4>
-                    <p class="card-description"> Basic form layout </p> -->
-                    <form class="col-md-4 forms-sample">
+                    <form class="col-md-4 forms-sample" method="POST" action="{{url('units/store')}}">
+                        @csrf
                         <div class="form-group">
                             <label for="exampleInputUsername1">Unit Name</label>
-                            <input type="text" class="form-control" id="unit_name" placeholder="Unit Name">
+                            <input type="text" class="form-control @error('unit_name') is-invalid @enderror" name="unit_name" id="unit_name" placeholder="Unit Name">
+                            @error('unit_name')
+                            <div class="invalid-feedback">{{$message}}</div>
+                            @enderror
                         </div>
                         <button type="submit" class="btn btn-gradient-primary me-2">Save</button>
                     </form>

@@ -21,6 +21,12 @@ class UnitController extends Controller
 
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'unit_name' => 'required|string',
+        ]);
+
+        Unit::create(['unit_name' => $request->get('unit_name')]);
+        return back()->with('success', 'Unit is created successfully');
     }
 
     public function show($id)

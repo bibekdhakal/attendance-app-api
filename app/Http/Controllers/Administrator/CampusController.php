@@ -21,6 +21,18 @@ class CampusController extends Controller
 
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'campus_name' => 'required|string',
+            'latitude' => 'required',
+            'longitude' => 'required'
+        ]);
+
+        Campus::create([
+            'campus_name' => $request->get('campus_name'),
+            'latitude' => $request->get('latitude'),
+            'longitude' => $request->get('longitude')
+        ]);
+        return back()->with('success', 'Campus is created successfully');
     }
 
     public function show($id)

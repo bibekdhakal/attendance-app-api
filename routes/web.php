@@ -14,8 +14,10 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/logout', [HomeController::class, 'logout'])->name('logout');
     Route::get('units', [UnitController::class, 'index'])->name('units.index');
     Route::get('units/create', [UnitController::class, 'create'])->name('units.create');
+    Route::post('units/store', [UnitController::class, 'store'])->name('units.store');
     Route::get('campuses', [CampusController::class, 'index'])->name('campuses.index');
     Route::get('campuses/create', [CampusController::class, 'create'])->name('campuses.create');
+    Route::post('campuses/store', [CampusController::class, 'store'])->name('campuses.store');
     Route::get('students', [UserController::class, 'students']);
     Route::get('attendance', [AttendanceController::class, 'index']);
 });
