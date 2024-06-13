@@ -22,6 +22,11 @@ Route::middleware(['auth'])->group(function () {
     Route::post('campuses/store', [CampusController::class, 'store'])->name('campuses.store');
     Route::get('campuses/edit/{id}', [CampusController::class, 'edit'])->name('campuses.edit');
     Route::post('campuses/update/{id}', [CampusController::class, 'update'])->name('campuses.update');
-    Route::get('students', [UserController::class, 'students']);
     Route::get('attendance', [AttendanceController::class, 'index']);
+    Route::get('students', [UserController::class, 'students'])->name('users.student');
+    Route::get('users', [UserController::class, 'index'])->name('users.index');
+    Route::get('users/create', [UserController::class, 'create'])->name('users.create');
+    Route::post('users/store', [UserController::class, 'store'])->name('users.store');
+    Route::get('users/edit/{id}', [UserController::class, 'edit'])->name('users.edit');
+    Route::post('users/update/{id}', [UserController::class, 'update'])->name('users.update');
 });

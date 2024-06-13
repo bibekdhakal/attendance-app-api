@@ -8,7 +8,6 @@
                 </div>
                 <div class="nav-profile-text d-flex flex-column">
                     <span class="font-weight-bold mb-2">{{Auth::user()->name}}</span>
-                    <!-- <span class="text-secondary text-small">Project Manager</span> -->
                 </div>
                 <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
             </a>
@@ -20,21 +19,10 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#students" aria-expanded="false" aria-controls="students">
+            <a class="nav-link" href="{{url('/students')}}">
                 <span class="menu-title">Students</span>
-                <i class="menu-arrow"></i>
                 <i class="mdi mdi-contacts menu-icon"></i>
             </a>
-            <div class="collapse" id="students">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{url('/students')}}">List</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Create</a>
-                    </li>
-                </ul>
-            </div>
         </li>
         <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#attedance" aria-expanded="false" aria-controls="attedance">
@@ -63,6 +51,22 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('/campuses/create')}}">Create</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#users" aria-expanded="false" aria-controls="users">
+                <span class="menu-title">Users</span>
+                <i class="mdi mdi-contacts menu-icon"></i>
+            </a>
+            <div class="collapse" id="users">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('/users')}}">List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('/users/create')}}">Create</a>
                     </li>
                 </ul>
             </div>
