@@ -32,4 +32,19 @@ class UnitController extends Controller
     public function show($id)
     {
     }
+
+    public function edit($id)
+    {
+        $unit  = Unit::findOrFail($id);
+        return view('administrators.unit.edit', ['unit' => $unit]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $unit  = Unit::findOrFail($id);
+        $unit->unit_name = $request->get('unit_name');
+        $unit->save();
+
+        return back()->with('success', 'Unit is updated successfully');
+    }
 }

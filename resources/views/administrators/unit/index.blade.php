@@ -14,9 +14,6 @@
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <!-- <h4 class="card-title">Units</h4> -->
-                    <!-- <p class="card-description"> Add class <code>.table-hover</code> -->
-                    </p>
                     <table class="table table-hover">
                         <thead>
                             <tr>
@@ -32,7 +29,7 @@
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$unit->unit_name}}</td>
                                 <td>Code</td>
-                                <td><button type="button" class="badge badge-info">Update</button></td>
+                                <td><a href="{{url('units/edit', $unit->unit_id)}}" class="badge badge-info">Update</a></td>
                             </tr>
                             @endforeach
                         </tbody>
