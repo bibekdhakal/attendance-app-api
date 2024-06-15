@@ -82,7 +82,7 @@ Route::post('/subscription', function (Request $request) {
 
     return view('subscription', ['selectedPlan' => $request->get('plan')]);
 });
-Route::group(['middleware' => ['switch.tenant']], function () {
+Route::group(['middleware' => ['web', 'switch.tenant']], function () {
     // Route::prefix('/{tenant}')->group(function () {
     Route::get('/login', [HomeController::class, 'index']);
 
