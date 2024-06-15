@@ -19,7 +19,7 @@ class TenantDatabaseMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         try {
-            $domain = $request->header('domain') ?: $request->route('tenant');
+            $domain = $request->header('domain') ?: $request->getHost();
             if ($domain) {
                 $tenant = Tenant::where('domain', $domain)->first();
                 if ($tenant) {
